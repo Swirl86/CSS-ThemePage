@@ -1,0 +1,318 @@
+/* css Zen Garden http://www.csszengarden.com/ */
+
+/*----------------------------------------------------------------------------
+		Basic elements
+----------------------------------------------------------------------------- */
+* { /* all elements */
+	margin:0;
+	padding:0;
+}
+
+body {
+	font: 75% Arial, Helvetica, sans-serif;
+	line-height:15px;
+	font-size:15px;
+	color: #555753;
+
+	/* Header and background color */
+	background: #699f53 url(header.jpg) no-repeat fixed top;
+	background-size: 100% 50%;
+
+	/*Change images smoothly*/
+	transition: all 0.5s ease-in-out;
+	transition-duration: 2s;
+	cursor: pointer;
+}
+
+body:hover {
+	background: #699f53 url(header_hover.jpg) no-repeat fixed top;
+	background-size: 100% 50%;
+
+	transition: all 0.5s ease-in-out;
+	transition-duration: 2s;
+}
+
+p {
+	margin: 10px;
+	padding: 5px;
+	text-align: justify;
+}
+
+p:hover {
+	color: #555753;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+header h1, header h2 {
+	/*Hide text, show only url image*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	float: right;
+}
+
+header h1 {
+	/*CSS Zen Garden image*/
+	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat;
+	margin-top: 20px;
+	display: block;
+	width: 219px;
+	height: 87px;
+}
+
+header h2 {
+	/*The Beauty of CSS Design image*/
+	background: url(http://csszengarden.com/001/h2.gif) no-repeat;
+	margin-top: 20px;
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+}
+
+h3 {
+	/*Litle bonsai icon left of h3 title's*/
+	background: url(http://csszengarden.com/069/bonsai.gif) no-repeat;
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px;
+	color: #87826b;
+	font-weight: bold;
+	padding-left: 28px;
+}
+
+div h3:hover {
+	font-size: 25px;
+	color: #575344;
+}
+
+aside {
+	border-radius: 5px;
+}
+
+/*----------------------------------------------------------------------------
+		Link elements
+---------------------------------------------------------------------------- */
+a {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #7082e0;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #8461b1;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #5969ba;
+}
+
+abbr {
+	position: relative;
+	color: #1c7545;
+	font-weight: bold;
+}
+
+/*Info popup*/
+abbr:hover::after {
+	position: absolute;
+    width: 300px;
+    bottom: 100%;
+    left: 100%;
+    display: block;
+    padding: 1em;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid black;
+    background: #6aebbc;
+    content: attr(title);
+}
+
+/*----------------------------------------------------------------------------
+		Middle Content Form
+----------------------------------------------------------------------------- */
+.page-wrapper {
+	width: 892px;
+    background: url(top_background.jpg) no-repeat top;
+	position: absolute;
+	top: 230px;
+	left: 50px; /* move content form position x-axis*/
+}
+
+/*----------------------------------------------------------------------------
+		Middle content sections
+---------------------------------------------------------------------------- */
+.summary {
+	display:none;
+}
+
+.preamble {
+	padding: 185px 100px 10px 205px;
+}
+
+.preamble h3 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #7D8965;
+}
+
+.supporting{
+	/*Side image background of Content Form, green border*/
+	background-image:url(http://csszengarden.com/207/content_tile.jpg);
+	padding-bottom: 10px;
+}
+
+.supporting h3{
+	border-bottom: 2px solid #7D8965;
+}
+
+.explanation {
+	padding: 10px 100px 5px 205px;
+}
+
+.participation {
+	margin: 0px 100px 5px 205px;
+	padding-top:10px;
+}
+
+.benefits {
+	margin: 0px 100px 5px 205px;
+	padding-top:10px;
+}
+
+.requirements {
+	margin: 0px 100px 30px 205px;
+	padding:10px 0 15px 0;
+	border-bottom: 1px solid #7D8965;
+}
+
+/*---------------------------------------------------------------------------
+		Side Bar
+----------------------------------------------------------------------------- */
+.sidebar, .extra1 {
+	position:absolute;
+	width:160px;
+	top:300px;
+	font-size:12px;
+	left: 25px;
+	font-weight: bold;
+	background-color: #c3e4a9;
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+	text-shadow: 0 0 2px #3e4737;
+}
+
+.sidebar h3 {
+	/*Hide text, show url image as "text"*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*Background url are title images for sidebar ul*/
+.sidebar h3.select {
+	background: transparent url(http://csszengarden.com/096/stit_01.gif) no-repeat top left;
+	margin: 15px 5px 10px 5px;
+	height: 35px;
+}
+
+.sidebar h3.archives {
+	background: transparent url(http://csszengarden.com/096/stit_02.gif) no-repeat top left;
+	margin: 5px 5px 5px 0px;
+	height: 20px;
+}
+
+.sidebar h3.resources {
+	background: transparent url(http://csszengarden.com/096/stit_03.gif) no-repeat top left;
+	margin: 5px 5px 5px 0px;
+	height: 20px;
+}
+
+.sidebar ul {
+	/*Small leaf below ul content*/
+	background-image: url(http://csszengarden.com/118/leaf_09a.gif);
+	background-color: #ddf6ca;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	padding: 10px 10px 30px 10px;
+	margin-bottom: 20px;
+}
+
+.sidebar li {
+	/*Brown line between li items*/
+	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+	background-size: 150px 2px;
+	line-height: 18px;
+	display: block;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sidebar li a:link {
+	color: #0000EE;
+}
+
+.sidebar li a:hover {
+	color: #0000b3;
+}
+
+.sidebar li a:visited {
+	color: #551A8B;
+}
+
+/*----------------------------------------------------------------------------
+		Footer
+----------------------------------------------------------------------------- */
+
+footer{
+	padding-bottom: 15px;
+	text-align: center;
+	background-color: #d3f2d3;
+	padding: 30px 0px 30px 0px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+footer a {
+	background: #ffffff;
+	margin: 5px;
+	border: 3px solid #bcdfa1;
+	border-radius: 5px;
+	padding: 8px 8px;
+	font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------
+	Extra
+----------------------------------------------------------------------------- */
+.extra1::before{
+	color: white;
+	font-weight: bold;
+	background-color: #984747;
+	padding: 2px;
+	content: "I can zoom in and out!";
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.extra1 {
+	position: relative;
+	background: transparent url(http://csszengarden.com/001/cr2.gif) no-repeat;
+    height: 164px;
+    top: 140em;
+	left: -15px;
+    margin-left: 112px;
+	/*Zoom in and out effect */
+	cursor: pointer;
+	transition: all 1s ease-in;
+}
+
+.extra1:hover {
+	transform: scale(1.3);
+	transition: all 1s ease-in;
+}
